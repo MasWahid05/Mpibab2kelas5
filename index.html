@@ -6,6 +6,7 @@
 <meta name="description" content="Bab 2 · Berpikir Cerdas, Bergerak Taktis. Periksa kesadaran ruang, usaha, dan hubungan saat bergerak, lalu perkirakan dan uji strategi permainan bersama timmu.">
 <style>:root{color-scheme:light}html,body{margin:0}body{font:14px system-ui,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Bab 2 Berpikir Cerdas, Bergerak Taktis · Kelas 5</title>
+
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@600;800;900&display=swap">
 <style>
 /* Tata letak: pita kepala (kanvas) -> tab bagian -> satu panel per bagian; kartu berbingkai tinta tebal ala kartun cel. Warna utama bisa diganti lewat DATA.tema */
@@ -200,6 +201,12 @@ html.pid .toples{min-height:320px}
 .baris.diseret{opacity:.85;transform:scale(1.02);box-shadow:6px 8px 0 rgba(0,0,0,.35);z-index:2;position:relative}
 .pasang{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}.ps-kolom h3{font-size:20px;color:var(--tosca);margin:0 0 6px}
 .ps-isi{display:grid;gap:8px}
+.set-soal{margin:0 0 8px;font-size:15px;font-weight:700;color:var(--redup,inherit)}
+.bs-isi{display:grid;gap:8px}.bs-baris{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;border:4px solid var(--garis);border-radius:14px;background:var(--kertas);color:var(--teks);padding:10px 12px;font-weight:800;box-shadow:3px 4px 0 var(--garis)}
+.bs-baris .nomor{font-family:var(--display);font-size:20px;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--kuning);color:#2B1A3F}
+.bs-baris.oke{border-color:#19B894;box-shadow:3px 4px 0 #19B894}.bs-baris.bug{border-color:#FF4F64;box-shadow:3px 4px 0 #FF4F64}.bs-tombol{display:flex;gap:6px}.bs-tombol .tombol{padding:8px 14px;font-size:15px}
+.bs-alasan{grid-column:2/-1;font-weight:600;font-size:15px;color:#C0263B}
+@media (max-width:720px){.bs-baris{grid-template-columns:auto 1fr}.bs-tombol{grid-column:1/-1}}
 .ps-kartu{display:flex;gap:10px;align-items:center;text-align:left;border:4px solid var(--garis);border-radius:14px;background:var(--kertas);color:var(--teks);padding:10px 12px;font-weight:800;box-shadow:3px 4px 0 var(--garis);touch-action:none;user-select:none;-webkit-user-select:none;min-height:52px}
 .ps-kartu i{flex:none;font-style:normal;font-family:var(--display);color:#fff;width:30px;height:30px;border-radius:9px;display:grid;place-items:center}
 .ps-kartu.sasaran{background:#E6FFF6}.ps-kartu.oke{background:#C8F5E5;color:#14382D}.ps-kartu.bug{background:#FFD3D9;color:#4A1420}
@@ -431,10 +438,8 @@ window.DATA = {
 
   ketMain: "Murid maju ke layar PID. Geser pemain di papan taktik, seret atau ketuk jawaban.",
   permainan: [
-    { jenis: "pasang", n: "Ruang, Usaha, atau Hubungan?", k: "Kelompokkan contoh", judulKiri: "Contoh gerak", judulKanan: "Konsep",
-      pasangan: [["Merangkak di tingkatan rendah", "Ruang · tingkatan"], ["Lari zig-zag melewati cone", "Ruang · jalur"], ["Mengoper pelan ke teman dekat", "Usaha · tenaga"], ["Lari tiba-tiba cepat", "Usaha · waktu"], ["Menirukan gerak teman seperti cermin", "Hubungan · orang lain"], ["Melompati kardus", "Hubungan · benda"]] },
-    { jenis: "urut", n: "Langkah Menguji Strategi", k: "Susun langkahnya", awal: "MASALAH", akhir: "MENANG BERSAMA",
-      langkah: ["Kenali masalah dalam permainan", "Rencanakan strategi bersama tim", "Coba strategi saat bermain", "Amati hasilnya", "Perbaiki strategi lalu coba lagi"] },
+    {"jenis": "pasang", "n": "Ruang, Usaha, atau Hubungan?", "k": "LKPD 1–3 · soal acak dari 15", "judulKiri": "Contoh gerak", "judulKanan": "Konsep", "ambil": 6, "pasangan": [["Merangkak di tingkatan rendah", "Ruang · tingkatan"], ["Meloncat meraih bola di atas", "Ruang · tingkatan"], ["Lari zig-zag di lapangan kosong", "Ruang · jalur"], ["Berjalan melengkung seperti ular", "Ruang · jalur"], ["Berjalan mundur", "Ruang · arah"], ["Bergeser ke samping", "Ruang · arah"], ["Lari tiba-tiba cepat", "Usaha · waktu"], ["Berjalan pelan seperti siput", "Usaha · waktu"], ["Mengoper pelan ke teman dekat", "Usaha · tenaga"], ["Melempar kuat ke teman jauh", "Usaha · tenaga"], ["Gerak mengalir terus tanpa berhenti", "Usaha · aliran"], ["Melompati kardus", "Hubungan · benda"], ["Merangkak di bawah tali", "Hubungan · benda"], ["Menirukan gerak teman seperti cermin", "Hubungan · orang lain"], ["Bergerak bergantian dengan pasangan", "Hubungan · orang lain"]], "penjelas": "Ruang = di mana, usaha = bagaimana, hubungan = dengan siapa/apa."},
+    {"jenis": "urut", "n": "Urutkan Langkah Cerdas", "k": "LKPD 2 & 4 · 3 set soal", "awal": "MULAI", "akhir": "SELESAI", "set": [{"n": "Menguji strategi", "awal": "MASALAH", "akhir": "MENANG BERSAMA", "langkah": ["Kenali masalah dalam permainan", "Rencanakan strategi bersama tim", "Coba strategi saat bermain", "Amati hasilnya", "Perbaiki strategi lalu coba lagi"]}, {"n": "Oper lalu lari", "awal": "PEGANG BOLA", "akhir": "MENERIMA LAGI", "langkah": ["Lihat teman yang bebas", "Panggil nama teman", "Oper bola ke teman", "Langsung lari ke ruang kosong", "Terima operan balik"]}, {"n": "Mengatur kecepatan", "awal": "DIAM", "akhir": "BERHENTI", "langkah": ["Jalan pelan", "Jalan cepat", "Lari kecil", "Lari cepat", "Berhenti terkendali sambil menekuk lutut"]}]},
     { jenis: "taktik", n: "Papan Taktik Bola Tangan Mini", k: "Menyerang & bertahan", lapangan: "polos",
       tim: [["Penyerang", "#F2A516", 4, "A"], ["Bertahan", "#0E8F6E", 4, "B"]],
       ket: "Tim A menyerang ke kanan. Geser pemain, gambar panah gerak, lalu diskusikan keputusan terbaik.",
@@ -444,8 +449,8 @@ window.DATA = {
         { n: "Oper lalu lari", A: [[40, 50], [58, 15], [58, 85], [75, 50]], B: [[50, 45], [62, 25], [62, 75], [82, 50]], bola: [42, 50],
           panah: [[[40, 50], [50, 30], [58, 17]], [[40, 50], [55, 55], [70, 62]]], ket: "A1 mengoper ke A2 lalu langsung lari ke ruang kosong untuk menerima bola lagi." },
         { n: "Bertahan: tutup ruang", A: [[40, 50], [58, 15], [58, 85], [75, 50]], B: [[46, 50], [60, 20], [60, 80], [78, 50]], bola: [42, 50], ket: "Setiap penjaga berdiri di antara penyerang dan sasaran, lalu saling memberi tahu." }] },
-    { jenis: "pasang", n: "Masalah dan Solusi Taktik", k: "Pilih keputusan cerdas", judulKiri: "Masalah", judulKanan: "Solusi",
-      pasangan: [["Temanmu dijaga ketat", "Oper ke teman lain yang bebas"], ["Semua teman bergerombol", "Sebar ke ruang kosong"], ["Lawan mendekat saat menggiring", "Lindungi bola atau oper"], ["Lawan mudah mencetak skor", "Tutup ruang di depan sasaran"]] },
+    {"jenis": "pasang", "n": "Masalah dan Solusi Taktik", "k": "LKPD 4 · soal acak dari 8", "judulKiri": "Masalah", "judulKanan": "Solusi", "ambil": 5, "pasangan": [["Temanmu dijaga ketat", "Oper ke teman lain yang bebas"], ["Semua teman bergerombol", "Sebar ke ruang kosong"], ["Lawan mendekat saat menggiring", "Lindungi bola atau oper"], ["Lawan mudah mencetak skor", "Tutup ruang di depan sasaran"], ["Lawan berdiri jauh darimu", "Giring bola maju ke ruang kosong"], ["Operanmu terlalu keras untuk teman dekat", "Kurangi tenaga operan"], ["Tim tidak tahu tugas masing-masing", "Rencanakan strategi sebelum bermain"], ["Strategi gagal di babak pertama", "Perbaiki rencana lalu coba lagi"]]},
+    {"jenis": "bs", "n": "Benar atau Salah?", "k": "Semua materi · soal acak dari 18", "ambil": 8, "pernyataan": [["Kesadaran ruang menjawab pertanyaan \"di mana tubuh bergerak?\"", 1], ["Kesadaran usaha menjawab pertanyaan \"dengan siapa aku bergerak?\"", 0, "Usaha menjawab \"bagaimana tubuh bergerak?\"; hubungan menjawab \"dengan siapa/apa\"."], ["Ruang pribadi adalah area yang bisa dijangkau tanpa berpindah tempat.", 1], ["Merangkak termasuk gerak tingkatan tinggi.", 0, "Merangkak dekat lantai, jadi tingkatan rendah."], ["Jalur gerak bisa lurus, lengkung, atau zig-zag.", 1], ["Mengoper ke teman dekat sebaiknya memakai tenaga sekuat-kuatnya.", 0, "Tenaga disesuaikan dengan jarak; teman dekat cukup tenaga ringan."], ["Lari tiba-tiba cepat termasuk pengaturan waktu dalam usaha.", 1], ["Gerak lancar berarti gerak yang terputus-putus.", 0, "Gerak lancar berarti terus mengalir."], ["Melompati kardus adalah hubungan dengan benda.", 1], ["Mencerminkan berarti menirukan gerak teman yang berhadapan.", 1], ["Saat menyerang, semua pemain sebaiknya berkumpul di dekat bola.", 0, "Pemain menyebar ke ruang kosong supaya mudah dioper."], ["Setelah mengoper, langsung lari ke ruang kosong.", 1], ["Penjaga berdiri di antara lawan dan sasaran.", 1], ["Merebut bola boleh dengan menabrak badan lawan.", 0, "Tidak aman dan melanggar aturan; potong operan atau tutup ruang."], ["Strategi dibuat dengan rencanakan, coba, amati, perbaiki.", 1], ["Jika strategi gagal sekali, tim harus langsung menyerah.", 0, "Strategi diperbaiki lalu dicoba lagi."], ["Kerja sama dan komunikasi membuat strategi tim berhasil.", 1], ["Menyalahkan teman saat kalah adalah sikap sportif.", 0, "Sikap sportif adalah mencari solusi bersama."]]},
     { jenis: "roda", n: "Roda Gerak Cerdas", k: "Selingan", atas: "PUTAR RODA!",
       isi: ["Jalan di tingkatan rendah", "Lari cepat lalu lambat", "Gerak lengkung seperti ular", "Cerminkan gerak teman", "Loncat setinggi mungkin", "Gerak ringan seperti kapas", "Gerak kuat seperti robot", "Bergerak mengelilingi cone"], catatan: "Lakukan 10 detik di tempat yang aman." },
     { jenis: "rebutan", n: "Kuis Rebutan Tim", k: "Dua tim di depan PID", tim: [["Tim Hijau", "#0E8F6E"], ["Tim Emas", "#E0A100"]], jumlah: 10, detik: 20 }
@@ -523,7 +528,7 @@ const LENCANA_SEMUA=[
  ['lacak','Detektif Jeli','Menyelesaikan 3 kartu cari kesalahan','🔍'],['gerak','Peniru Gerak','Mempelajari 3 gerakan','🏃'],
  ['urut','Ahli Urutan','Menyusun urutan dengan benar','🔢'],['pasang','Pasangan Tepat','Memasangkan semua dengan benar','🧩'],
  ['label','Penjelajah Lapangan','Menempel semua label dengan benar','📍'],['taktik','Ahli Strategi','Menyimpan taktik di papan','🧠'],
- ['rebutan','Juara Rebutan','Menyelesaikan kuis rebutan','⚡'],['roda','Berani Tantangan','Memutar roda tantangan','🎡'],
+ ['rebutan','Juara Rebutan','Menyelesaikan kuis rebutan','⚡'],['roda','Berani Tantangan','Memutar roda tantangan','🎡'],['bs','Teliti Benar–Salah','Menjawab semua benar atau salah dengan tepat','✅'],
  ['refleksi','Refleksi Jujur','Mengisi tiket keluar','💬']];
 function lencanaAktif(){const J=new Set((D.permainan||[]).map(p=>p.jenis));
   return LENCANA_SEMUA.filter(([id])=>id==='kuis'||id==='kuis100'?ada(D.kuis):id==='lacak'?!!(D.lacak&&ada(D.lacak.kartu)):id==='gerak'?ada(D.gerakan):id==='refleksi'?D.refleksi!==false:J.has(id));}
@@ -1032,19 +1037,20 @@ function gambarDiagram(k){const B='<svg viewBox="0 0 1000 560" preserveAspectRat
   return B+`<rect width="1000" height="560" fill="#3E9B4F"/></svg>`;}
 
 const MAIN=D.permainan||[],AM=$('#arenaMain');
-const NAMA_MAIN={urut:'Urutkan Langkah',pasang:'Pasangkan',label:'Tempel Label',taktik:'Papan Taktik',rebutan:'Kuis Rebutan',roda:'Roda Tantangan'};
+const NAMA_MAIN={urut:'Urutkan Langkah',pasang:'Pasangkan',label:'Tempel Label',taktik:'Papan Taktik',rebutan:'Kuis Rebutan',roda:'Roda Tantangan',bs:'Benar atau Salah'};
 if(D.ketMain)$('#ketMain').innerHTML=D.ketMain;
 MAIN.forEach((g,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.dataset.m=i;b.dataset.jenis=g.jenis;b.innerHTML=`<b>${esc(g.n||NAMA_MAIN[g.jenis]||'Permainan')}</b>${esc(g.k||NAMA_MAIN[g.jenis]||'')}`;b.onclick=()=>pilihMain(i);$('#mainPilih').appendChild(b);});
 let mainHenti=()=>{};
 function pilihMain(i){mainHenti();mainHenti=()=>{};document.querySelectorAll('#mainPilih button').forEach(b=>b.setAttribute('aria-selected',+b.dataset.m===i?'true':'false'));
-  const G=MAIN[i],f={urut:mainUrut,pasang:mainPasang,label:mainLabel,taktik:mainTaktik,rebutan:mainRebutan,roda:mainRoda}[G.jenis];
+  const G=MAIN[i],f={urut:mainUrut,pasang:mainPasang,label:mainLabel,taktik:mainTaktik,rebutan:mainRebutan,roda:mainRoda,bs:mainBS}[G.jenis];
   if(f)f(G,i);else AM.innerHTML=`<p class="kecil">Jenis permainan "${esc(G.jenis)}" tidak dikenal.</p>`;}
 const kontrolCek=(p)=>`<div class="baris-kontrol"><button class="tombol" id="${p}Periksa" type="button">Periksa</button><button class="tombol dua" id="${p}Ulang" type="button">Ulangi</button><span class="kecil" id="${p}Info" aria-live="polite"></span></div><div class="penjelas" id="${p}Penjelas"></div>`;
 
 // 1. Urutkan langkah: seret naik-turun atau ketuk dua kartu untuk menukar
-function mainUrut(G){const L=G.langkah||[];let ur,pilih=null,cek=false;
+function pilihSet(G0,daftar){let k=Math.floor(Math.random()*daftar.length);if(daftar.length>1&&k===G0._akhir)k=(k+1)%daftar.length;G0._akhir=k;return daftar[k];}
+function mainUrut(G0){const G=ada(G0.set)?Object.assign({},G0,pilihSet(G0,G0.set)):G0;const L=G.langkah||[];let ur,pilih=null,cek=false;
   const kocok=()=>{ur=acak(L.map((_,i)=>i));let n=0;while(L.length>1&&ur.every((v,i)=>v===i)&&n++<9)ur=acak(ur);};kocok();
-  AM.innerHTML=`<p class="petunjuk-main">${G.petunjuk||'Susun dari langkah pertama sampai terakhir. <b>Seret kartu ke atas atau ke bawah</b>, atau ketuk dua kartu untuk menukar tempatnya.'}</p>
+  AM.innerHTML=`${ada(G0.set)?`<p class="set-soal">Soal: <b>${esc(G.n||'')}</b> · ${G0.set.length} set soal, berganti setiap kali <b>Soal lain</b></p>`:''}<p class="petunjuk-main">${G.petunjuk||'Susun dari langkah pertama sampai terakhir. <b>Seret kartu ke atas atau ke bawah</b>, atau ketuk dua kartu untuk menukar tempatnya.'}</p>
   <div class="program urut-daftar">${G.awal?`<div class="ujung">${esc(G.awal)}</div>`:''}<div id="urIsi" class="urut-isi"></div>${G.akhir?`<div class="ujung">${esc(G.akhir)}</div>`:''}</div>${kontrolCek('ur')}`;
   const isi=$('#urIsi');
   const gambar=()=>{isi.innerHTML='';ur.forEach((k,pos)=>{const b=document.createElement('button');b.type='button';b.className='baris urut'+(G.kode?' kodefont':'')+(cek?(k===pos?' oke':' bug'):'')+(pilih===pos?' dipilih':'');b.dataset.k=k;
@@ -1064,18 +1070,19 @@ function mainUrut(G){const L=G.langkah||[];let ur,pilih=null,cek=false;
   $('#urPeriksa').onclick=()=>{cek=true;pilih=null;const benar=ur.filter((k,p)=>k===p).length;gambar();
     if(benar===L.length){$('#urInfo').textContent=`Hebat! Semua ${L.length} langkah sudah urut.`;bunyi(880,.2);beriLencana('urut');if(G.penjelas)$('#urPenjelas').innerHTML=`<div class="ok"><b>Kenapa urutannya begini?</b> ${G.penjelas}</div>`;}
     else{$('#urInfo').textContent=`${benar} dari ${L.length} langkah sudah di tempat yang benar. Kartu merah belum tepat.`;bunyi(330,.15);}};
-  $('#urUlang').onclick=()=>{kocok();cek=false;pilih=null;$('#urInfo').textContent='';$('#urPenjelas').innerHTML='';gambar();};}
+  if(ada(G0.set)){$('#urUlang').textContent='Soal lain';$('#urUlang').onclick=()=>mainUrut(G0);}
+  else $('#urUlang').onclick=()=>{kocok();cek=false;pilih=null;$('#urInfo').textContent='';$('#urPenjelas').innerHTML='';gambar();};}
 
 // 2. Pasangkan: ketuk kartu kiri lalu kartu kanan (atau seret kartu kanan ke kiri)
-function mainPasang(G){const P=G.pasangan||[];let kanan,jodoh,pK=null,pN=null,cek=false;
+function mainPasang(G0){const bank=G0.pasangan||[],acakBank=G0.ambil&&G0.ambil<bank.length;const G=acakBank?Object.assign({},G0,{pasangan:acak(bank).slice(0,G0.ambil)}):G0;const P=G.pasangan||[];const cocok=(i,j)=>j!==undefined&&P[j]&&P[j][1]===P[i][1];let kanan,jodoh,pK=null,pN=null,cek=false;
   const mulai=()=>{kanan=acak(P.map((_,i)=>i));jodoh={};pK=pN=null;cek=false;};mulai();
-  AM.innerHTML=`<p class="petunjuk-main">${G.petunjuk||'Ketuk satu kartu kiri, lalu kartu kanan yang menjadi pasangannya. Bisa juga <b>menyeret kartu kanan ke kartu kiri</b>.'}</p>
+  AM.innerHTML=`${acakBank?`<p class="set-soal">${P.length} soal diambil acak dari <b>${bank.length}</b> soal · tekan <b>Soal lain</b> untuk soal baru</p>`:''}<p class="petunjuk-main">${G.petunjuk||'Ketuk satu kartu kiri, lalu kartu kanan yang menjadi pasangannya. Bisa juga <b>menyeret kartu kanan ke kartu kiri</b>.'}</p>
   <div class="pasang"><div class="ps-kolom"><h3>${esc(G.judulKiri||'')}</h3><div id="psKiri" class="ps-isi"></div></div><div class="ps-kolom"><h3>${esc(G.judulKanan||'')}</h3><div id="psKanan" class="ps-isi"></div></div></div>${kontrolCek('ps')}`;
   const nomorDari=j=>{const i=Object.keys(jodoh).find(k=>jodoh[k]===j);return i===undefined?null:+i;};
   const pasangkan=(i,j)=>{for(const k in jodoh)if(jodoh[k]===j)delete jodoh[k];jodoh[i]=j;pK=pN=null;cek=false;$('#psInfo').textContent='';$('#psPenjelas').innerHTML='';bunyi(660,.06,.12);gambar();};
   const gambar=()=>{const ki=$('#psKiri'),ka=$('#psKanan');ki.innerHTML='';ka.innerHTML='';
     P.forEach((p,i)=>{const b=document.createElement('button');b.type='button';b.className='ps-kartu ps-kiri';b.dataset.i=i;const j=jodoh[i],w=j!==undefined?WARNA_PASANG[i%10]:'';
-      if(w)b.style.cssText=`border-color:${w};box-shadow:4px 5px 0 ${w}`;if(pK===i)b.classList.add('dipilih');if(cek&&j!==undefined)b.classList.add(j===i?'oke':'bug');
+      if(w)b.style.cssText=`border-color:${w};box-shadow:4px 5px 0 ${w}`;if(pK===i)b.classList.add('dipilih');if(cek&&j!==undefined)b.classList.add(cocok(i,j)?'oke':'bug');
       b.innerHTML=`${w?`<i style="background:${w}">${i+1}</i>`:''}`;b.append(p[0]);b.onclick=()=>{if(pN!==null)pasangkan(i,pN);else{pK=pK===i?null:i;gambar();}};ki.appendChild(b);});
     kanan.forEach(j=>{const b=document.createElement('button');b.type='button';b.className='ps-kartu ps-kanan';b.dataset.j=j;const i=nomorDari(j),w=i!==null?WARNA_PASANG[i%10]:'';
       if(w)b.style.cssText=`border-color:${w};box-shadow:4px 5px 0 ${w}`;if(pN===j)b.classList.add('dipilih');
@@ -1088,10 +1095,25 @@ function mainPasang(G){const P=G.pasangan||[];let kanan,jodoh,pK=null,pN=null,ce
         if(gg){if(t)pasangkan(+t.dataset.i,j);return;}if(pK!==null)pasangkan(pK,j);else{pN=pN===j?null:j;gambar();}});
       b.addEventListener('pointercancel',()=>{m=null;if(h){h.remove();h=null;}});});};
   gambar();
-  $('#psPeriksa').onclick=()=>{cek=true;const n=P.length,benar=P.filter((_,i)=>jodoh[i]===i).length,isi=Object.keys(jodoh).length;gambar();
+  $('#psPeriksa').onclick=()=>{cek=true;const n=P.length,benar=P.filter((_,i)=>cocok(i,jodoh[i])).length,isi=Object.keys(jodoh).length;gambar();
     if(benar===n){$('#psInfo').textContent=`Hebat! Semua ${n} pasangan benar.`;bunyi(880,.2);beriLencana('pasang');if(G.penjelas)$('#psPenjelas').innerHTML=`<div class="ok">${G.penjelas}</div>`;}
     else{$('#psInfo').textContent=`${benar} dari ${n} pasangan benar${isi<n?`, ${n-isi} belum dipasangkan`:''}.`;bunyi(330,.15);}};
-  $('#psUlang').onclick=()=>{mulai();$('#psInfo').textContent='';$('#psPenjelas').innerHTML='';gambar();};}
+  if(acakBank){$('#psUlang').textContent='Soal lain';$('#psUlang').onclick=()=>mainPasang(G0);}
+  else $('#psUlang').onclick=()=>{mulai();$('#psInfo').textContent='';$('#psPenjelas').innerHTML='';gambar();};}
+
+// 2b. Benar atau Salah: pernyataan diambil acak dari bank, ketuk BENAR/SALAH lalu Periksa
+function mainBS(G0){const bank=G0.pernyataan||[],S=acak(bank).slice(0,Math.min(G0.ambil||8,bank.length)),jw={};let cek=false;
+  AM.innerHTML=`<p class="set-soal">${S.length} pernyataan diambil acak dari <b>${bank.length}</b> · tekan <b>Soal lain</b> untuk soal baru</p><p class="petunjuk-main">${G0.petunjuk||'Baca setiap pernyataan, lalu ketuk <b>BENAR</b> atau <b>SALAH</b>. Setelah itu tekan Periksa.'}</p><div id="bsIsi" class="bs-isi"></div>${kontrolCek('bs')}`;
+  const gambar=()=>{const el=$('#bsIsi');el.innerHTML='';S.forEach((s,i)=>{const d=document.createElement('div');d.className='bs-baris'+(cek&&jw[i]!==undefined?(jw[i]===!!s[1]?' oke':' bug'):'');d.dataset.i=i;
+    d.innerHTML=`<span class="nomor">${i+1}</span><span class="bs-teks"></span><span class="bs-tombol"></span>`;d.querySelector('.bs-teks').textContent=s[0];
+    [['BENAR',true],['SALAH',false]].forEach(([t,v])=>{const b=document.createElement('button');b.type='button';b.className='tombol'+(jw[i]===v?'':' dua');b.dataset.v=v?1:0;b.textContent=t;b.setAttribute('aria-pressed',jw[i]===v?'true':'false');
+      b.onclick=()=>{jw[i]=v;cek=false;$('#bsInfo').textContent='';bunyi(660,.06,.12);gambar();};d.querySelector('.bs-tombol').appendChild(b);});
+    if(cek&&jw[i]!==undefined&&jw[i]!==!!s[1]&&s[2]){const p=document.createElement('div');p.className='bs-alasan';p.textContent=s[2];d.appendChild(p);}el.appendChild(d);});};
+  gambar();
+  $('#bsPeriksa').onclick=()=>{cek=true;const benar=S.filter((s,i)=>jw[i]===!!s[1]).length,isi=Object.keys(jw).length;gambar();
+    if(benar===S.length){$('#bsInfo').textContent=`Hebat! Semua ${S.length} jawaban benar.`;bunyi(880,.2);beriLencana('bs');}
+    else{$('#bsInfo').textContent=`${benar} dari ${S.length} benar${isi<S.length?`, ${S.length-isi} belum dijawab`:''}. Baca penjelasan di baris merah.`;bunyi(330,.15);}};
+  $('#bsUlang').textContent='Soal lain';$('#bsUlang').onclick=()=>mainBS(G0);}
 
 // 3. Tempel label pada gambar (lapangan, tubuh, alat): seret nama ke lingkaran bernomor
 function mainLabel(G){const T=G.titik||[];let pos,urutChip,pilih=null,cek=false;
